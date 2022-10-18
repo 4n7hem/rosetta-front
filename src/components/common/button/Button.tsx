@@ -16,7 +16,7 @@ export function Button({
   append,
 }: ButtonProps) {
   let fixedClassName =
-    "group relative flex w-full justify-center items-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 h-9 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 " +
+    "w-full flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 py-2 h-9 text-base font-medium text-white shadow-sm hover:bg-indigo-700 " +
     append;
 
   if (!fullWidth) {

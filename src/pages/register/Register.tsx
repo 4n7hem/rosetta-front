@@ -6,7 +6,7 @@ export default function Register() {
     <Container>
       <Topbar nonAuth />
 
-      <Container className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <Container className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8 ">
         <Container className="w-full max-w-md space-y-8">
           <Container>
             <h2 className="mt-6 text-center text-3xl font-medium tracking-tight text-gray-900">

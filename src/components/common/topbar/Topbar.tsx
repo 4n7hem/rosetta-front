@@ -22,15 +22,15 @@ type TopbarProps = {
 
 export function Topbar({ nonAuth }: TopbarProps) {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure
+      as="nav"
+      className="border-b-2 border-gray-100 md:justify-start "
+    >
+      {/* <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10"> */}
       <>
         {nonAuth ? (
           <Container className="flex w-full justify-between items-center h-14">
-            <Image
-              src={logoRosetta}
-              alt="logo-rosetta"
-              className="mx-8 h-8"
-            />
+            <Image src={logoRosetta} alt="logo-rosetta" className="mx-8 h-8" />
             <Button append="mx-8" onClick={() => console.log("Botão de login")}>
               Entrar
             </Button>
@@ -173,6 +173,7 @@ export function Topbar({ nonAuth }: TopbarProps) {
           </div>
         </Disclosure.Panel>
       </>
+      {/* </div> */}
     </Disclosure>
   );
 }
