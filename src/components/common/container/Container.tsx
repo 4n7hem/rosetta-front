@@ -1,7 +1,8 @@
 type ContainerProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-export default function Container({ children }: ContainerProps) {
-  return <div className="container">{children}</div>;
+export function Container({ children, className }: ContainerProps) {
+  return <div className={className || "w-full	"}>{children}</div>;
 }
