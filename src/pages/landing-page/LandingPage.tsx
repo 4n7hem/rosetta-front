@@ -6,7 +6,7 @@ import {
   Button,
 } from "./../../components/index";
 
-import imgLandingPage0 from "./../../assets/images/land_page_img0.png";
+import imgLandingPage0 from "./../../assets/images/land_page_community.svg";
 
 import imgLandingPagePessoa0 from "./../../assets/images/land_page_pessoa0.png";
 import imgLandingPagePessoa1 from "./../../assets/images/land_page_pessoa1.png";
