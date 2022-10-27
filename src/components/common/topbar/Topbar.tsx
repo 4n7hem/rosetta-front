@@ -26,14 +26,25 @@ export function Topbar({ nonAuth }: TopbarProps) {
       as="nav"
       className="border-b-2 border-gray-100 md:justify-start "
     >
-      {/* <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10"> */}
       <>
         {nonAuth ? (
           <Container className="flex w-full justify-between items-center h-14">
             <Image src={logoRosetta} alt="logo-rosetta" className="mx-8 h-8" />
-            <Button append="mx-8" onClick={() => console.log("Botão de login")}>
-              Entrar
-            </Button>
+
+            <Container className="flex min-h-full items-center justify-center">
+              <Button
+                onClick={() => console.log("Botão de login")}
+              >
+                Entrar
+              </Button>
+
+              <Button
+                append="mx-8"
+                onClick={() => console.log("Botão de cadastro")}
+              >
+                Cadastrar
+              </Button>
+            </Container>
           </Container>
         ) : (
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
