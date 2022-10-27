@@ -33,16 +33,16 @@ export function Topbar({ nonAuth }: TopbarProps) {
 
             <Container className="flex min-h-full items-center justify-center">
               <Button
-                onClick={() => console.log("Botão de login")}
+                onClick={() => console.log("Botão de cadastro")}
               >
-                Entrar
+                Cadastrar
               </Button>
 
               <Button
                 append="mx-8"
-                onClick={() => console.log("Botão de cadastro")}
+                onClick={() => console.log("Botão de login")}
               >
-                Cadastrar
+                Entrar
               </Button>
             </Container>
           </Container>
