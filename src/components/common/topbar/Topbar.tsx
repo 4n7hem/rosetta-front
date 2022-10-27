@@ -24,7 +24,7 @@ export function Topbar({ nonAuth }: TopbarProps) {
   return (
     <Disclosure
       as="nav"
-      className="border-b-2 border-gray-100 md:justify-start "
+      className="border-b-2 border-gray-100 md:justify-start bg-default"
     >
       <>
         {nonAuth ? (
@@ -32,7 +32,10 @@ export function Topbar({ nonAuth }: TopbarProps) {
             <Image src={logoRosetta} alt="logo-rosetta" className="mx-8 h-8" />
 
             <Container className="flex min-h-full items-center justify-center">
-              <Button onClick={() => console.log("Botão de cadastro")}>
+              <Button
+                onClick={() => console.log("Botão de cadastro")}
+                className="border-white"
+              >
                 Cadastrar
               </Button>
 
