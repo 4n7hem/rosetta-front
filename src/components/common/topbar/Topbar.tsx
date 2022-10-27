@@ -32,14 +32,13 @@ export function Topbar({ nonAuth }: TopbarProps) {
             <Image src={logoRosetta} alt="logo-rosetta" className="mx-8 h-8" />
 
             <Container className="flex min-h-full items-center justify-center">
-              <Button
-                onClick={() => console.log("Botão de cadastro")}
-              >
+              <Button onClick={() => console.log("Botão de cadastro")}>
                 Cadastrar
               </Button>
 
               <Button
                 append="mx-8"
+                className="bg-secundary bg-secundary-hover"
                 onClick={() => console.log("Botão de login")}
               >
                 Entrar

@@ -16,7 +16,7 @@ export function Button({
   append,
 }: ButtonProps) {
   let fixedClassName =
-    "w-full flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 py-2 h-9 text-base font-medium text-white shadow-sm hover:bg-indigo-700 " +
+    "w-full flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-default py-2 h-9 text-base font-medium text-white shadow-sm bg-default-hover " +
     append;
 
   if (!fullWidth) {
@@ -27,7 +27,7 @@ export function Button({
     <button
       type={type}
       onClick={onClick}
-      className={className || fixedClassName}
+      className={`${fixedClassName}  ${className}`}
     >
       {children}
     </button>

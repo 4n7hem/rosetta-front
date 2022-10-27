@@ -16,7 +16,7 @@ export function Banner({ itemsList, className }: BannerProps) {
     <Container
       className={
         className ||
-        "flex w-full items-center justify-evenly bg-indigo-800 mt-24 pt-4 px-8 mt-24 mb-24"
+        "flex w-full items-center justify-evenly bg-default mt-24 pt-4 px-8 mt-24 mb-24"
       }
     >
       {itemsList.map((item, index) => (

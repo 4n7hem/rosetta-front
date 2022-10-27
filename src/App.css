@@ -39,3 +39,20 @@
 .read-the-docs {
   color: #888;
 }
+
+.bg-default {
+  background-color: #1c032b;
+}
+
+.bg-default-hover:hover {
+  background-color: #360652;
+}
+
+.bg-secundary {
+  background-color: #c54735;
+}
+
+.bg-secundary-hover:hover {
+  background-color: #f15a43;
+  border: none;
+}

@@ -67,7 +67,7 @@ export default function LandingPage() {
             <h1 className="flex items-left text-3xl font-bold text-gray-700 w-80">
               Escreva textos com
             </h1>
-            <span className="flex items-left text-3xl font-bold text-white w-80 bg-indigo-800">
+            <span className="flex items-left text-3xl font-bold text-white w-80 bg-default">
               Coesão e coerência
             </span>
             <h1 className="flex items-left text-3xl font-bold text-gray-700 w-80">
@@ -89,6 +89,7 @@ export default function LandingPage() {
 
             <Button
               append="self-center w-60 mt-8 mb-8"
+              className="bg-secundary bg-secundary-hover"
               onClick={() => console.log("Clicou em ver tradutores")}
             >
               Ver tradutores
