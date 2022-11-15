@@ -4,4 +4,6 @@ export const paths = {
   landingPage: "/",
   home: "/home",
   profile: "/perfil",
+  new_request: "/new-request",
+  display_requests: "/display-requests"
 };

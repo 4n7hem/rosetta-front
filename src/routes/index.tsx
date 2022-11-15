@@ -5,6 +5,8 @@ import { paths } from "./../services/utils/paths";
 import Home from "../pages/home/Home";
 import Register from "../pages/register/Register";
 import LandingPage from "../pages/landing-page/LandingPage";
+import DisplayRequests from "../pages/requests/display";
+import NewRequest from "../pages/requests/new";
 
 const AppRoutes = () => {
   return (
@@ -14,6 +16,8 @@ const AppRoutes = () => {
         {/* <Route path={paths.login} element={<Login />} /> */}
         <Route path={paths.register} element={<Register />} />
         <Route path={paths.home} element={<Home />} />
+        <Route path={paths.display_requests} element={<DisplayRequests />} />
+        <Route path={paths.new_request} element={<NewRequest />} />
       </Routes>
     </BrowserRouter>
   );
