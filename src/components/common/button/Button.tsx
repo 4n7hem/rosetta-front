@@ -10,13 +10,13 @@ type ButtonProps = {
 export function Button({
   children,
   type,
-  className,
+  className = "",
   onClick,
   fullWidth,
-  append,
+  append = "",
 }: ButtonProps) {
   let fixedClassName =
-    "w-full flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-default py-2 h-9 text-base font-medium text-white shadow-sm bg-default-hover " +
+    "w-full flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-secondary-500 py-2 h-9 text-base font-medium text-white shadow-sm" +
     append;
 
   if (!fullWidth) {

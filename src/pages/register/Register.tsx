@@ -1,7 +1,35 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Input } from "../../components/common/input/Input";
 import { Button, Container, Topbar, Image } from "./../../components";
 
+
 export default function Register() {
+
+  const navigate = useNavigate();
+
+  const handleSubmit = (event: any) => {
+    const body: any = {}
+    event.preventDefault()
+    const formData = new FormData(event.target);
+    
+    for (let [key, value] of formData.entries()) {
+      body[key] = value
+    }
+
+    if(body['password'] !== body['confirm-password']) return alert("As senhas não coincidem")
+
+    fetch("http://localhost:3000/registrar",{ method: "POST", body: JSON.stringify(body), headers: { "Content-Type": "application/json"} })
+    .then( response => response.text())
+    .then( response => {
+      console.log(response)
+      if( response === "Usuário e/ou senha incorretos!" ) return
+
+      navigate("/")
+    })
+
+  }
+
   return (
     <Container>
       <Topbar nonAuth />
@@ -22,11 +50,11 @@ export default function Register() {
               </a>
             </p>
           </Container>
-          <form className="mt-8 space-y-6" action="#" method="POST">
+          <form className="mt-8 space-y-6" action="#" method="POST" onSubmit={handleSubmit}>
             <Input
               labelText="Nome"
               id="name"
-              name="name"
+              name="username"
               type="text"
               required
               placeholder="Digite seu nome"
@@ -54,7 +82,7 @@ export default function Register() {
             <Input
               labelText="Confirmar senha"
               id="password"
-              name="password"
+              name="confirm-password"
               type="password"
               required
               placeholder="Confirme sua senha"

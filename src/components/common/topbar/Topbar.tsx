@@ -4,6 +4,7 @@ import { MdClose, MdMenu, MdOutlineNotificationsNone } from "react-icons/md";
 import { Container, Image, Button } from "../../index";
 
 import logoRosetta from "../../../assets/images/logos/logo_rosetta.svg";
+import { useNavigate } from "react-router-dom";
 
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
@@ -18,9 +19,15 @@ function classNames(...classes: string[]) {
 
 type TopbarProps = {
   nonAuth?: boolean;
+  handleLogin?: () => void;
 };
 
-export function Topbar({ nonAuth }: TopbarProps) {
+export function Topbar({
+  nonAuth,
+  handleLogin = () => null 
+}: TopbarProps) {
+
+  const navigate = useNavigate();
   return (
     <Disclosure
       as="nav"
@@ -28,12 +35,12 @@ export function Topbar({ nonAuth }: TopbarProps) {
     >
       <>
         {nonAuth ? (
-          <Container className="flex w-full justify-between items-center h-14">
+          <Container className="flex w-full justify-between items-center h-14 max-w-7xl mx-auto">
             <Image src={logoRosetta} alt="logo-rosetta" className="mx-8 h-8" />
 
             <Container className="flex min-h-full items-center justify-center">
               <Button
-                onClick={() => console.log("Botão de cadastro")}
+                onClick={() => navigate("/cadastro")}
                 className="border-white"
               >
                 Cadastrar
@@ -42,7 +49,7 @@ export function Topbar({ nonAuth }: TopbarProps) {
               <Button
                 append="mx-8"
                 className="bg-secundary bg-secundary-hover"
-                onClick={() => console.log("Botão de login")}
+                onClick={handleLogin}
               >
                 Entrar
               </Button>

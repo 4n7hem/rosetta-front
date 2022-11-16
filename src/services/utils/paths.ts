@@ -4,4 +4,8 @@ export const paths = {
   landingPage: "/",
   home: "/home",
   profile: "/perfil",
+  editProfile: "/perfil/editar",
+  orders: "/pedidos",
+  order: "/pedidos/:id",
+  createOrder: "/pedidos/novo"
 };
